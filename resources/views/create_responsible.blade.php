@@ -30,7 +30,8 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="CPF">CPF:</label>
-              <input type="text" class="form-control" name="cpf" required="">
+              <input type="text" class="form-control" name="cpf"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn">
             </div>
           </div>
            </div>
@@ -64,7 +65,8 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="Number">Numero:</label>
-              <input type="number" class="form-control" name="number" required="">
+              <input type="text" class="form-control" name="number"  placeholder="9 1234-5678"
+           pattern="[9]{1} [0-9]{4}-[0-9]{4}" required="">
             </div>
         </div>
           <div class="row">

@@ -20,7 +20,7 @@ class CreateResponsiblesTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('street');
-            $table->integer('number'); 
+            $table->string('number'); 
             $table->string('bairro');
             $table->String('city');   
             $table->timestamps();

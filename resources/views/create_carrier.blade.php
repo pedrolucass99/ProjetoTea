@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Laravel 5.6 CRUD Tutorial With Example  </title>
+    <title>Cadastrar Portadores</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">  
@@ -28,9 +28,9 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="Cpf">CPF:</label>
-              <input type="text" class="form-control" name="cpf" required="">
+              <input type="text" class="form-control" name="cpf" required="" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato nnn.nnn.nnn-nn" placeholder="nnn.nnn.nnn-nn">
             </div>
-          </div>
+  
 
 				</div>
         <div class="row">
@@ -61,7 +61,7 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="Number">Numero:</label>
-              <input type="number" class="form-control" name="number" required="">
+              <input type="number" class="form-control" name="number" required="" placeholder="9 1234-5678" pattern="[9]{1} [0-9]{4}-[0-9]{4}">
             </div>
           </div>
 

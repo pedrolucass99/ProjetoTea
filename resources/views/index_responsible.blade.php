@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index Page</title>
+    <title>Resposável</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <style type="text/css">
     h1{
@@ -20,7 +20,8 @@
       </div><br />
      @endif
     <h1>Responsáveis</h1>
-    <a href="{{action('ResponsibleController@create')}}" class="btn btn-primary">Ir para o formulário</a>
+    <a href="{{action('ResponsibleController@create')}}" class="btn btn-primary">Cadastrar Responsável</a>
+    <a href="{{url('carriers')}}" class="btn btn-primary">Portadores</a>
     <table class="table table-striped">
     <thead>
       <tr>
@@ -56,7 +57,7 @@
           <form action="{{action('ResponsibleController@destroy', $responsible['id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit">Delete</button>
+            <button class="btn btn-danger" type="submit">Deletar</button>
           </form>
         </td>
       </tr>

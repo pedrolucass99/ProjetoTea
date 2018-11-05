@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Laravel 5.6 CRUD Tutorial With Example  </title>
+    <title>Cadastrar Responsáveis</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">  
@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <h2>Cadrastro de Responsavel</h2><br/>
+      <h2>Cadastro de Responsavel</h2><br/>
       <form method="post" action="{{url('responsibles')}}" enctype="multipart/form-data">
         @csrf
         
@@ -31,7 +31,7 @@
             <div class="form-group col-md-4">
               <label for="CPF">CPF:</label>
               <input type="text" class="form-control" name="cpf"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-      title="Digite o CPF no formato nnn.nnn.nnn-nn">
+      title="Digite o CPF no formato nnn.nnn.nnn-nn" placeholder="nnn.nnn.nnn-nn">
             </div>
           </div>
            </div>

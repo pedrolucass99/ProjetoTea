@@ -35,6 +35,16 @@ class CarrierController extends Controller
      */
     public function store(Request $request)
     {
+        
+
+
+        $validacao = $request->validate([
+            'cpf' => 'required'
+        ]);
+
+
+
+
         $carrier= new \App\Carrier;
         $carrier->name=$request->get('name');
         $carrier->cpf=$request->get('cpf');
@@ -88,6 +98,7 @@ class CarrierController extends Controller
      */
     public function update(Request $request, $id)
     {
+
             $carrier= \App\Carrier::find($id);
             $carrier->name=$request->get('name');
             $carrier->cpf=$request->get('cpf');

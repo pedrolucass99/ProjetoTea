@@ -60,8 +60,8 @@
           <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-              <label for="Number">Numero:</label>
-              <input type="number" class="form-control" name="number" required="" placeholder="9 1234-5678" pattern="[9]{1} [0-9]{4}-[0-9]{4}">
+              <label for="Number">Numero da casa:</label>
+              <input type="number" class="form-control" name="number" required="">
             </div>
           </div>
 

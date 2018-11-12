@@ -1,5 +1,5 @@
-<?php
 
+<?php
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,10 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::resource('carriers','CarrierController');
-
 Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('responsibles','ResponsibleController');
+Route::resource('carriers','CarrierController');
+
+Route::get('/responsibles', 'ResponsibleController@index');
+Route::get('/responsibles/create', 'ResponsibleController@create');
+Route::get('/carries', 'CarrierController@index');
+Route::get('/carries/create', 'CarrierController@create');
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');

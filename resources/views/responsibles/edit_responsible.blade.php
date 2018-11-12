@@ -22,7 +22,7 @@
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="cpf">CPF:</label>
-            <input type="text" class="form-control" name="cpf" value="{{$responsible->cpf}}">
+            <input type="text" class="form-control" name="cpf" required="" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato nnn.nnn.nnn-nn" placeholder="nnn.nnn.nnn-nn" value="{{$responsible->cpf}}">
           </div>
         </div>
         <div class="row">
@@ -36,7 +36,7 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="password">Senha:</label>
-              <input type="text" class="form-control" name="password" value="{{$responsible->password}}">
+              <input type="password" class="form-control" name="password" value="{{$responsible->password}}">
             </div>
           </div>
           <div class="row">
@@ -50,7 +50,8 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="number">Numero:</label>
-              <input type="text" class="form-control" name="number" value="{{$responsible->number}}">
+              <input type="text" class="form-control" name="number"  placeholder="9 1234-5678"
+           pattern="[9]{1} [0-9]{4}-[0-9]{4}" maxlength="11"required="" value="{{$responsible->number}}">
             </div>
           </div>
            <div class="row">
@@ -69,7 +70,7 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4" style="margin-top:60px">
-            <button type="submit" class="btn btn-success">Enviar Cadrastro</button>
+            <button type="submit" class="btn btn-success">Alterar</button>
           </div>
         </div>
       </form>

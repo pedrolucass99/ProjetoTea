@@ -8,6 +8,7 @@
   <body>
    <div class="container">
       <h2>Portador</h2><br/>
+				</div>
       <form method="post" action="{{action('CarrierController@update', $id)}}">
         @csrf
         <input type="hidden" name="_method" value="PATCH">
@@ -23,16 +24,15 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="Cpf">CPF:</label>
-              <input type="text" class="form-control" name="cpf" value="{{$carrier->cpf}}">
+              <input type="text" class="form-control" name="cpf" required="" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato nnn.nnn.nnn-nn" placeholder="nnn.nnn.nnn-nn"value="{{$carrier->cpf}}">
             </div>
           </div>
 
-				</div>
         <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="Password">Senha:</label>
-              <input type="text" class="form-control" name="password"
+              <input type="password" class="form-control" name="password"
               value="{{$carrier->password}}">
             </div>
           </div>
@@ -57,7 +57,7 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="Number">Numero:</label>
-              <input type="number" class="form-control" name="number" value="{{$carrier->number}}">
+              <input type="text" class="form-control" name="number" placeholder="9 1234-5678" pattern="[9]{1} [0-9]{4}-[0-9]{4}" maxlength="11" required=""value="{{$carrier->number}}">
             </div>
           </div>
 
@@ -81,7 +81,7 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4" style="margin-top:60px">
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success">Alterar</button>
           </div>
         </div>
       </form>

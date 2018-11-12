@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Mundo Azul</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{url('carriers')}}">Portadores</a>
-                    <a href="{{url('responsibles')}}">Responsáveis</a>
+                    <a href="{{url('carrier/')}}">Portadores</a>
+                    <a href="{{url('responsibles/')}}">Responsáveis</a>
                 </div>
             </div>
         </div>

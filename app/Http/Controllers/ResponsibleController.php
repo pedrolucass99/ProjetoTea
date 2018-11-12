@@ -14,7 +14,7 @@ class ResponsibleController extends Controller
     public function index()
     {
         $responsibles=\App\Responsible::all();
-        return view('index_responsible',compact('responsibles'));
+        return view('responsible/index_responsible',compact('responsibles'));
     }
 
     /**
@@ -24,7 +24,7 @@ class ResponsibleController extends Controller
      */
     public function create()
     {
-        return view('create_responsible');
+        return view('responsible/create_responsible');
     }
 
     /**
@@ -69,7 +69,7 @@ class ResponsibleController extends Controller
     public function edit($id)
     {
         $responsible = \App\Responsible::find($id);
-        return view('edit_responsible',compact('responsible','id'));
+        return view('responsible/edit_responsible',compact('responsible','id'));
     }
 
     /**

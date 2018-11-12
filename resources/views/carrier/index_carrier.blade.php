@@ -20,7 +20,7 @@
      @endif
      <h1>Portador</h1>
      <a class="btn btn-primary" href="{{action('CarrierController@create')}}">Cadastrar Portador</a>
-     <a class="btn btn-primary" href="{{url('responsibles')}}">Responsáveis</a>
+     <a class="btn btn-primary" href="{{url('../responsible/responsibles')}}">Responsáveis</a>
     <table class="table table-striped">
     <thead>
       <tr>

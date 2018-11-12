@@ -14,7 +14,7 @@ class CarrierController extends Controller
     public function index()
     {
         $carriers=\App\Carrier::all();
-        return view('index_carrier',compact('carriers'));
+        return view('carrier/index_carrier',compact('carriers'));
     }
 
     /**
@@ -24,7 +24,7 @@ class CarrierController extends Controller
      */
     public function create()
     {
-        return view('create_carrier');
+        return view('carrier/create_carrier');
     }
 
     /**
@@ -86,7 +86,7 @@ class CarrierController extends Controller
     public function edit($id)
     {
         $carrier = \App\Carrier::find($id);
-        return view('edit_carrier',compact('carrier','id'));
+        return view('carrier/edit_carrier',compact('carrier','id'));
     }
 
     /**
